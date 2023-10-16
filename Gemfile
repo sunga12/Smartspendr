@@ -63,3 +63,5 @@ group :development do
 end
 
 gem 'devise'
+
+gem 'cancancan'
