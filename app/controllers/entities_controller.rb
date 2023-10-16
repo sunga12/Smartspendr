@@ -1,6 +1,7 @@
 class EntitiesController < ApplicationController
     # only: [:index, :new, :create, :edit, :update, :destroy]
     def index
+      @entities = Entity.groupfind(params())
     end
   
     def new

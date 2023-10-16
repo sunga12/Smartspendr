@@ -1,5 +1,6 @@
 class GroupsController < ApplicationController
   def index
+    @groups = Group.all
   end
 
   def new
@@ -9,6 +10,7 @@ class GroupsController < ApplicationController
   end
 
   def show
+    @group = Group.find(params[:group_id])
   end
 
   def edit

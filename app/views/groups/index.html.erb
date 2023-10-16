@@ -2,4 +2,9 @@
 
 <%= render "devise/shared/logout" %>
 
-<%= render "devise/shared/abilities" %>
+
+<section>
+  <% @groups.each do |group|%>
+  <p>Category: <%= group.name %> </p>
+  <% end %>
+  </section>
