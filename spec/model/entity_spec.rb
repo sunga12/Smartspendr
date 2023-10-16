@@ -14,6 +14,11 @@ RSpec.describe Entity, type: :model do
     expect(subject).to_not be_valid
   end
 
+  it 'name should be the right length' do
+    subject.name = 'a'*260
+    expect(subject).to_not be_valid
+  end
+
   it 'amount should be present' do
     subject.amount = nil
     expect(subject).to_not be_valid
