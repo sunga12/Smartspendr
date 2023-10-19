@@ -1,23 +1,24 @@
-<h2>Log in</h2>
+
+<nav class="p-blue">
+<%= button_to '<-', welcome_index_path, class: "p-blue" %>
+  <p>LOGIN</p>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.email_field :email, autofocus: true, placeholder: "Email" %>
-  </div>
-
-  <div class="field">
-    <%= f.password_field :password, placeholder: "Password" %>
-  </div>
-
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end %>
 
   <div class="actions">
     <%= f.submit "Log in", class: "p-blue" %>
+  </div>
+
+  </nav>  
+
+  <div class="form-fields">
+    <div class="field">
+      <%= f.email_field :email, placeholder: "Email" %>
+    </div>
+
+    <div class="field">
+      <%= f.password_field :password, placeholder: "Password" %>
+    </div>
   </div>
 <% end %>
 

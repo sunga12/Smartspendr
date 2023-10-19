@@ -16,15 +16,18 @@
 
  body {
   font-family: Lato, Arial, Helvetica, sans-serif;
-  width: 40%;
-  margin: 2% auto;
-  border: 3px solid black;
-  
+  /* width: 40%; */
+  margin: 0 auto;
+  border: 1px solid black;
+  padding:  0;
+  height: 97vh;
+  overflow-y: hidden;
  }
 
  .p-blue {
   background-color: #3778c2;
   color: #fff;
+  border: 0;
  }
 
  .p-green {
@@ -35,4 +38,50 @@
  .p-grey {
   background-color: #434b54;
   color: #fff;
+ }
+
+ .splash-page {
+  /* justify-content: space-evenly; */
+  justify-content: center;
+  margin: auto;
+ }
+
+ .logo {
+  /* margin: auto; */
+  text-align: center;
+  margin: 50% 0;
+ }
+
+ .splash-link {
+ width: 100%;
+ padding: 3%;
+ margin: 1% auto;
+ border: 0;
+ border-radius: 3px;
+ }
+
+ .splash-link:hover {
+    background-color: #3778c2;
+    color: #fff;
+
+ }
+
+ nav{ 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+ }
+
+ .form-fields {
+
+  margin: 2%;
+ }
+
+ .form-field {
+  width: 95%;
+  margin: 1% auto;
+  padding: 2%;
  }
