@@ -6,7 +6,12 @@
 <section>
   <% @groups.each do |group|%>
   <a href="/groups/<%= group.id %>/entities">
+  <p>Icon: <%= group.icon %> </p>
   <p>Category: <%= group.name %> </p>
+  <p>Total: <%= group.entities.sum(:amount) %> </p>
+
+    
+
   </a>
   <% end %>
   </section>
