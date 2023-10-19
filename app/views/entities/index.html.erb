@@ -4,6 +4,7 @@
 
 
 <section>
+  <h4> Total Spent: <%= @entities.sum(:amount) %></h4>
   <% @entities.each do |entity|%>
   <p>Transactions: <%= entity.name %> </p>
   <% end %>
@@ -11,4 +12,4 @@
 
   <%= link_to 'New Transaction', new_group_entity_path %>
 <br />
-  <%= link_to 'Back to Categories', groups_path %>
+  <%= link_to 'Back to Categories', root_path %>

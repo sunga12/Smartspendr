@@ -5,7 +5,7 @@ class EntitiesController < ApplicationController
       # @entities = Entity.where(author_id: current_user.id)
 
       @group = current_user.groups.find(params[:group_id])
-      @entities = @group.entities
+      @entities = @group.entities.order(created_at: :desc)
 
     end
   
