@@ -2,7 +2,7 @@ class Group < ApplicationRecord
   
   # Associations
   belongs_to :user, class_name: "User", foreign_key: "author_id"
-  has_many :entities, dependent: :destroy
+  has_and_belongs_to_many :entities, dependent: :destroy
 
 
   # Attributes

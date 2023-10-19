@@ -10,8 +10,8 @@
   <%= form.label :amount %><br>
   <%= form.text_field :amount %><br>
 
-    <%= form.label :group_id %><br>
-  <%= form.collection_radio_buttons(:group_id, current_user.groups, :id, :name) %><br>
+    <%= form.label :group_ids %><br>
+  <%= form.collection_check_boxes(:group_ids, current_user.groups, :id, :name) %><br>
 
   <%= form.submit "Save Transaction" %><br>
   <%end%>
