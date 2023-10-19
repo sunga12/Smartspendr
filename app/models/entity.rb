@@ -1,9 +1,11 @@
 class Entity < ApplicationRecord
   
   # Associations
-  belongs_to :user, class_name: "User", foreign_key: "user_id"
-  has_many :entity_groups
-  has_many :groups, through: :entity_groups
+  belongs_to :user, class_name: "User", foreign_key: "author_id"
+  belongs_to :group
+
+
+  # , class_name: "User", foreign_key: "user_id"
 
   # Attributes
   attribute :name, :string
@@ -11,7 +13,7 @@ class Entity < ApplicationRecord
 
   # Validations
   validates :name, presence: true, length: { maximum: 250 }
-  validates :amount, presence: true, numericality: { greater_than_or_equal_to: 0, only_float: true }
+  validates :amount, presence: true, numericality: { greater_than_or_equal_to: 0}
 
 
   # Methods

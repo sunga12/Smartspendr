@@ -1,8 +1,9 @@
 class Group < ApplicationRecord
   
   # Associations
-  has_many :entity_groups
-  has_many :entities, through: :entity_groups
+  belongs_to :user, class_name: "User", foreign_key: "author_id"
+  has_many :entities, dependent: :destroy
+
 
   # Attributes
   attribute :name, :string

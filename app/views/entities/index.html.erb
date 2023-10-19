@@ -1,11 +1,16 @@
-<h1>This Page shows all the Transactions for 1 Category</h1>
+<h1>This Page shows all the Transactions for 1 Category for <%= current_user.name %></h1>
 
 <%= render "devise/shared/logout" %>
 
 <%= render "devise/shared/abilities" %>
 
+
 <section>
   <% @entities.each do |entity|%>
-  <p>Category: <%= entity.name %> </p>
+  <p>Transactions: <%= entity.name %> </p>
   <% end %>
   </section>
+
+  <%= link_to 'New Transaction', new_group_entity_path %>
+<br />
+  <%= link_to 'Back to Categories', groups_path %>

@@ -8,7 +8,7 @@ class Ability
 
     return unless user.present?
 
-    can :manage, Entity, user: user
-    can :manage, Group
+    can :manage, Entity, user_id: user.id
+    can :manage, Group, user_id: user.id
   end
 end

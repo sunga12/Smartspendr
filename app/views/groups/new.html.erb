@@ -1,1 +1,13 @@
-<h1>This Page is for making a new Category</h1>
+<h1>This Page is for making a new Category for <%= current_user.name %></h1>
+
+<div>
+<%= form_with model: @group, method: :post, url: groups_path do |form| %>
+  <%= form.label :name %><br>
+  <%= form.text_field :name %><br>
+
+  <%= form.label :icon %><br>
+  <%= form.text_field :icon %><br>
+
+  <%= form.submit "Save Category" %><br>
+  <%end%>
+</div>

@@ -1,10 +1,15 @@
-<h1>This Page shows all the Categories</h1>
+<h1>This Page shows all the Categories for <%= current_user.name %></h1>
 
 <%= render "devise/shared/logout" %>
 
 
 <section>
   <% @groups.each do |group|%>
+  <a href="/groups/<%= group.id %>/entities">
   <p>Category: <%= group.name %> </p>
+  </a>
   <% end %>
   </section>
+
+    <%= link_to 'New Category', new_group_path %>
+

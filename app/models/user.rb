@@ -6,14 +6,15 @@ class User < ApplicationRecord
          :confirmable
 
   # Associations
-  has_many :entities
+  has_many :entities, foreign_key: 'author_id', dependent: :destroy
+  has_many :groups, foreign_key: 'author_id', dependent: :destroy
 
   # Attributes
   attribute :name, :string
 
   # Validations
   validates :name, presence: :true, length: { maximum: 100 }
-  validates :email, presence: :true, length: { maximum: 100 }
+  validates :email, presence: :true, uniqueness: true, length: { maximum: 150 }
 
   # Methods
 
