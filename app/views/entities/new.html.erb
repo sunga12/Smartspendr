@@ -1,5 +1,6 @@
 <h1>This Page is for making a new Transaction</h1>
 
+  <%= link_to 'Back to Transactions', group_entities_path %>
 
 <div>
 <%= form_with model: @entity, method: :post, url: group_entities_path do |form| %>
@@ -9,7 +10,8 @@
   <%= form.label :amount %><br>
   <%= form.text_field :amount %><br>
 
-  <%= form.hidden_field :group_id, value: @group.id %>
+    <%= form.label :group_id %><br>
+  <%= form.collection_radio_buttons(:group_id, current_user.groups, :id, :name) %><br>
 
   <%= form.submit "Save Transaction" %><br>
   <%end%>

@@ -1,9 +1,6 @@
 class EntitiesController < ApplicationController
     # only: [:index, :new, :create, :edit, :update, :destroy]
     def index
-      # @groups = Group.where(author_id: current_user.id)
-      # @entities = Entity.where(author_id: current_user.id)
-
       @group = current_user.groups.find(params[:group_id])
       @entities = @group.entities.order(created_at: :desc)
 
@@ -19,7 +16,6 @@ class EntitiesController < ApplicationController
     end
   
     def create
-      # @entity = Entity.new(entity_params)  
       @group = current_user.groups.find(params[:entity][:group_id])
       @entity = @group.entities.new(entity_params)
       @entity.author_id = current_user.id

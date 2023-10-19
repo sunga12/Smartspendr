@@ -4,9 +4,6 @@ class Entity < ApplicationRecord
   belongs_to :user, class_name: "User", foreign_key: "author_id"
   belongs_to :group
 
-
-  # , class_name: "User", foreign_key: "user_id"
-
   # Attributes
   attribute :name, :string
   attribute :amount, :float
