@@ -1,5 +1,7 @@
 class EntitiesController < ApplicationController
     # only: [:index, :new, :create, :edit, :update, :destroy]
+    before_action :authenticate_user!
+
     def index
       @group = current_user.groups.find(params[:group_id])
       @entities = @group.entities.order(created_at: :desc)

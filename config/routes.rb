@@ -1,8 +1,20 @@
 Rails.application.routes.draw do
+  get 'welcome/index'
   devise_for :users
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-  root to: "groups#index"
 
+  devise_scope :user do
+    get '/users/sign_out' => 'devise/sessions/#destroy'
+
+    authenticated :user do
+      root to: "groups#index", as: :authenticated_root
+    end
+
+    unauthenticated do
+      root to: "welcome#index", as: :unauthenticated_root
+    end
+  end
+
+  
   resources :groups do
     resources :entities, only: [:index, :new, :create, :edit, :update, :destroy]
   end
