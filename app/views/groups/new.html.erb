@@ -1,5 +1,7 @@
 <h1>This Page is for making a new Category for <%= current_user.name %></h1>
 
+  <%= link_to 'Back to Categories', root_path %>
+  <br />
 <div>
 <%= form_with model: @group, method: :post, url: groups_path do |form| %>
   <%= form.label :name %><br>
