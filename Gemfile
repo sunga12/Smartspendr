@@ -48,6 +48,15 @@ group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ]
   gem 'rspec-rails'
+
+    # Capybara, the library that allows us to interact with the browser using Ruby
+    gem 'capybara'
+
+    # The following gems aids with the nuts and bolts
+    # of interacting with the browser.
+    gem 'warden'
+
+    gem 'webdrivers'
 end
 
 group :development do

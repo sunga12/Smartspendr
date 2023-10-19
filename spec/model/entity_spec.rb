@@ -4,7 +4,7 @@ RSpec.describe Entity, type: :model do
   subject do
     Entity.new(name: 'Lasagna',
                amount: 5.75,
-               user_id: User.create(name: 'Harry').id)
+               author_id: User.create(name: 'Harry').id)
   end
 
   before { subject.save }

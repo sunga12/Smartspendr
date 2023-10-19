@@ -1,9 +1,6 @@
 class GroupsController < ApplicationController
   def index
     @groups = Group.where(author_id: current_user.id)
-
-    # @group = current_user.groups.find(params[:entity])
-
   end
 
   def new
@@ -29,11 +26,7 @@ class GroupsController < ApplicationController
       end
     end
   end
-
-  # def show
-  #   @group = Group.find(params[:group_id])
-  # end
-
+  
   def edit
   end
 
