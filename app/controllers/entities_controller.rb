@@ -51,6 +51,9 @@ class EntitiesController < ApplicationController
     end
   
     def destroy
+      @entity = Entity.find(params[:id])
+      @entity.destroy
+      redirect_to group_entities_path(:group_id)
     end
 
     private 

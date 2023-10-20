@@ -14,7 +14,10 @@
     <div class="category">
       <p class="trans-name"><%= entity.name %> </p>
       <p class="mid-categ small-text"><%= entity.created_at %></p>
+      <div class="end-categ">
       <p>$<%= entity.amount %></p>
+      <%= button_to "Delete", group_entity_path(id: entity.id, group_ids: entity.group_ids), class: "delete-categ p-green", method: :delete, data: {confirm: "Are you sure you want to delete this category?"} %>
+      </div>
     </div>
   <% end %>
 </section>

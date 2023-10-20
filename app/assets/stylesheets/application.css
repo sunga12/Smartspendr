@@ -16,17 +16,15 @@
 
  body {
   font-family: Lato, Arial, Helvetica, sans-serif;
-  /* width: 40%; */
   margin: 0 auto;
   padding:  0;
   height: 97vh;
-  /* overflow-y: hidden; */
   background-color: #eeeeee;
  }
 
  a {
    text-decoration: none;
-   color: #fff;
+   /* color: #fff; */
  }
 
  .p-blue {
@@ -45,29 +43,32 @@
   color: #fff;
  }
 
- .page {
-   /* margin: 2%; */
- }
-
  .splash-page {
-  /* justify-content: space-evenly; */
   justify-content: center;
   margin: auto;
-  /* padding: 2%; */
+   overflow-y: hidden;
+
  }
 
  .logo {
-  /* margin: auto; */
   text-align: center;
-  margin: 50% 0;
+  margin-top: 7rem;
  }
 
+ .splash-links {
+   position: fixed;
+   bottom: 5px;
+   width: 100%;
+ }
  .splash-link {
  width: 100%;
  padding: 3%;
  margin: 1% auto;
  border: 0;
  border-radius: 3px;
+ background-color: #3778c2;
+ color: #fff;
+
  }
 
  .splash-link:hover {
@@ -109,6 +110,11 @@
    box-shadow: 0px 2px 5px 0px rgba(94, 94, 94, 0.699);
 }
 
+.link-categ {
+   display: flex;
+   gap: 1rem;
+}
+
  .mid-categ {
    display: flex;
    flex-direction: column;
@@ -132,7 +138,6 @@
  .bottom-btn {
    display: flex;
    justify-content: center;
-   /* justify-self: flex-end; */
    position: fixed;
    bottom: 0;
    width: 100%;
@@ -140,10 +145,10 @@
  
  .icon-div {
    width: 30%;
+   justify-self: flex-start;
  }
 
  .icon {
-   /* border: 2px solid red; */
    margin: 3%;
    width: 100%;
  }
@@ -155,8 +160,6 @@
  }
 
  .logout-btn {
-   /* margin-right: 2%; */
-   /* padding: 2%; */
    padding-top: 0.5rem;
    padding-bottom: 0.5rem;
  }
@@ -185,4 +188,9 @@
 
  .icon-upload {
    margin: 3%;
+ }
+
+ .delete-categ {
+   z-index: 1000;
+   border: 3px solid #fff;
  }

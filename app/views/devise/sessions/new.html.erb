@@ -1,6 +1,8 @@
 
 <nav class="p-blue">
-<%= button_to '<-', welcome_index_path, class: "p-blue" %>
+<%= link_to unauthenticated_root_path do %>
+  <%= image_tag('back.png', alt: 'Back', class: "back-icon")%>
+  <% end %>
   <p>LOGIN</p>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -13,11 +15,11 @@
 
   <div class="form-fields">
     <div class="field">
-      <%= f.email_field :email, placeholder: "Email" %>
+      <%= f.email_field :email, placeholder: "Email", class: "form-field"  %>
     </div>
 
     <div class="field">
-      <%= f.password_field :password, placeholder: "Password" %>
+      <%= f.password_field :password, placeholder: "Password", class: "form-field"  %>
     </div>
   </div>
 <% end %>

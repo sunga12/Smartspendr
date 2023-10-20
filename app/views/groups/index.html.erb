@@ -6,19 +6,24 @@
 
 <section class="categories">
   <% @groups.each do |group|%>
-  <a class="category" href="/groups/<%= group.id %>/entities">
-    <% if group.icon.attached? %>
-  <div class="icon-div">
-    <%= image_tag group.icon, class: "icon" %>
+  <div class="category">
+    <a class="link-categ" href="/groups/<%= group.id %>/entities">
+      <% if group.icon.attached? %>
+        <div class="icon-div">
+      <%= image_tag group.icon, class: "icon" %>
+      </div>
+      <% else %>
+        <p>No icon available.</p>
+      <% end %>
+      <div class="mid-categ">
+        <p ><%= group.name %> </p>
+      </div>
+    </a>
+    <div class="end-categ">
+      <p class="total">$<%= group.entities.sum(:amount) %> </p>
+      <%= button_to "Delete", group_path(group.id), class: "delete-categ p-green", method: :delete, data: {confirm: "Are you sure you want to delete this category?"} %>
     </div>
-    <% else %>
-      <p>No icon available.</p>
-    <% end %>
-    <div class="mid-categ">
-      <p ><%= group.name %> </p>
-    </div>
-    <p class="total">$<%= group.entities.sum(:amount) %> </p>
-  </a>
+  </div>
   <% end %>
 
 <div class="bottom-btn p-green">
