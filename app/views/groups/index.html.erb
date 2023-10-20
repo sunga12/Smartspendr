@@ -1,17 +1,23 @@
-<h1>This Page shows all the Categories for <%= current_user.name %></h1>
+<nav class="p-blue">
+<h1><%= current_user.name %>'s Categories</h1>
 
 <%= render "devise/shared/logout" %>
+</nav>
 
-
-<section>
+<section class="categories">
   <% @groups.each do |group|%>
-  <a href="/groups/<%= group.id %>/entities">
-  <img class="icon" src='<%= group.icon%>' alt='Category Icon'> <br>
-  <p>Category: <%= group.name %> </p>
-  <p>Total: <%= group.entities.sum(:amount) %> </p>
+  <a class="category" href="/groups/<%= group.id %>/entities">
+    <img class="icon" src='<%= group.icon%>' alt='Category Icon'> <br>
+    <div class="mid-categ">
+      <p ><%= group.name %> </p>
+    </div>
+    <p class="total">$<%= group.entities.sum(:amount) %> </p>
   </a>
   <% end %>
+
+<div class="bottom-btn p-green">
+  <%= button_to 'New Category', new_group_path, class: "p-green new-categ-btn", method: :get %>
+</div>
   </section>
 
-    <%= link_to 'New Category', new_group_path %>
 

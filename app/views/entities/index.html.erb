@@ -1,15 +1,22 @@
-<h1>This Page shows all the Transactions for 1 Category for <%= current_user.name %></h1>
+<nav class="p-blue">
+    <%= link_to '<-', groups_path, class: "p-blue" %>
+  <h1><%= current_user.name %>'s Transactions</h1>
 
 <%= render "devise/shared/logout" %>
 
+</nav>
 
 <section>
-  <h4> Total Spent: <%= @entities.sum(:amount) %></h4>
+  <h4 class="category"> <span>Total Spent:</span> <span>$<%= @entities.sum(:amount) %></span></h4>
   <% @entities.each do |entity|%>
-  <p>Transactions: <%= entity.name %> </p>
+    <div class="category">
+      <p class="trans-name"><%= entity.name %> </p>
+      <p class="mid-categ small-text"><%= entity.created_at %></p>
+      <p>$<%= entity.amount %></p>
+    </div>
   <% end %>
-  </section>
+</section>
 
-  <%= link_to 'New Transaction', new_group_entity_path %>
-<br />
-  <%= link_to 'Back to Categories', root_path %>
+<div class="bottom-btn p-green">
+  <%= link_to 'New Transaction', new_group_entity_path, class: "p-green new-categ-btn margin-0-2pc" %>
+</div>

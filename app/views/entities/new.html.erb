@@ -1,18 +1,26 @@
-<h1>This Page is for making a new Transaction</h1>
+<nav class="p-blue">
+  <%= link_to '<-', group_entities_path %>
+  <h1>New Transaction</h1>
+  <h4>Help</h4>
+</nav>
 
-  <%= link_to 'Back to Transactions', group_entities_path %>
-
-<div>
+<section>
 <%= form_with model: @entity, method: :post, url: group_entities_path do |form| %>
-  <%= form.label :name %><br>
-  <%= form.text_field :name %><br>
+<br />
+  <div>
+    <%= form.text_field :name, placeholder: "Name" , class: "form-field" %><br>
+  </div>
 
-  <%= form.label :amount %><br>
-  <%= form.text_field :amount %><br>
+  <div>
+    <%= form.text_field :amount, placeholder: "Amount" , class: "form-field" %><br>
+  </div>
 
-    <%= form.label :group_ids %><br>
-  <%= form.collection_check_boxes(:group_ids, current_user.groups, :id, :name) %><br>
+  <div class="checkboxes" >
+    <%= form.collection_check_boxes(:group_ids, current_user.groups, :id, :name)%><br>
+  </div>
 
-  <%= form.submit "Save Transaction" %><br>
+  <div class="bottom-btn p-green">
+    <%= form.submit "Save Transaction", class: "new-categ-btn p-green" %><br>
+  </div>
   <%end%>
-</div>
+</section>

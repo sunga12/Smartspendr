@@ -1,15 +1,22 @@
-<h1>This Page is for making a new Category for <%= current_user.name %></h1>
+<nav class="p-blue">
+  <%= link_to '<-', groups_path %>
+  <h1>New Category</h1>
+  <h4>Help</h4>
+</nav>
 
-  <%= link_to 'Back to Categories', root_path %>
-  <br />
 <div>
 <%= form_with model: @group, method: :post, url: groups_path do |form| %>
-  <%= form.label :name %><br>
-  <%= form.text_field :name %><br>
+<br/>
+  <div>
+    <%= form.text_field :name, placeholder: "Name" , class: "form-field" %><br>
+  </div>
 
-  <%= form.label :icon %><br>
-  <%= form.text_field :icon %><br>
+  <div>
+    <%= form.text_field :icon, placeholder: "icon" , class: "form-field" %><br>
+  </div>
 
-  <%= form.submit "Save Category" %><br>
+  <div class="bottom-btn p-green">
+    <%= form.submit "Save Category", class: "new-categ-btn p-green" %><br>
+  </div>
   <%end%>
 </div>
