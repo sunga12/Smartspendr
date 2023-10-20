@@ -31,7 +31,7 @@
 
 # 📖 SmartSpendr <a name="about-project"></a>
 
-  **SmartSpendr** is a web application crafted with Ruby on Rails and powered by PostgreSQL. This App is designed to help you spend smarter, and budget better! It helps you to track you expenditures across the different categories they fall into, to help you see where all you money is "disappearing" to! Check it Out
+  **SmartSpendr** is a web application crafted with Ruby on Rails and powered by PostgreSQL. This App is designed to help you spend smarter, and budget better! It helps you to track you expenditures across the different categories they fall into, to help you see where all you money is "disappearing" to!
 
 
 ## 🛠 Built With <a name="built-with"></a>
@@ -55,7 +55,7 @@
 <details>
 <summary>Styling</summary>
   <ul>
-    <li><a href="https://tailwindcss.com/">CSS3</a></li>
+    <li><a href="https://css3.com/">CSS3</a></li>
   </ul>
 </details>
 
@@ -111,7 +111,7 @@ $ git clone git@github.com:sunga12/Smartspendr.git
 - Then switch to the project folder:
 
 ```
-$ cd Recipe-App-RoR
+$ cd Smartspendr
 ```
 
 - Install the required dependencies with `bundle install`
