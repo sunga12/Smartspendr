@@ -7,7 +7,13 @@
 <section class="categories">
   <% @groups.each do |group|%>
   <a class="category" href="/groups/<%= group.id %>/entities">
-    <img class="icon" src='<%= group.icon%>' alt='Category Icon'> <br>
+    <% if group.icon.attached? %>
+  <div class="icon-div">
+    <%= image_tag group.icon, class: "icon" %>
+    </div>
+    <% else %>
+      <p>No icon available.</p>
+    <% end %>
     <div class="mid-categ">
       <p ><%= group.name %> </p>
     </div>

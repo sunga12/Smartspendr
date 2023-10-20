@@ -1,5 +1,7 @@
 <nav class="p-blue">
-    <%= link_to '<-', groups_path, class: "p-blue" %>
+    <%= link_to groups_path do %>
+  <%= image_tag('back.png', alt: 'Back', class: "back-icon")%>
+  <% end %>
   <h1><%= current_user.name %>'s Transactions</h1>
 
 <%= render "devise/shared/logout" %>

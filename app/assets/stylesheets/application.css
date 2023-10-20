@@ -18,10 +18,9 @@
   font-family: Lato, Arial, Helvetica, sans-serif;
   /* width: 40%; */
   margin: 0 auto;
-  border: 1px solid black;
   padding:  0;
   height: 97vh;
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
   background-color: #eeeeee;
  }
 
@@ -139,9 +138,14 @@
    width: 100%;
  }
  
+ .icon-div {
+   width: 30%;
+ }
+
  .icon {
-   border: 2px solid red;
+   /* border: 2px solid red; */
    margin: 3%;
+   width: 100%;
  }
 
  .total {
@@ -172,4 +176,13 @@
    justify-content: center;
    gap: 1rem;
    flex-wrap: wrap;
+ }
+
+ .back-icon {
+   width: 2rem;
+   filter: brightness(0) invert(1); /* Apply a white color overlay */
+ }
+
+ .icon-upload {
+   margin: 3%;
  }

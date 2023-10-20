@@ -1,18 +1,21 @@
 <nav class="p-blue">
-  <%= link_to '<-', groups_path %>
+  <%= link_to groups_path do %>
+  <%= image_tag('back.png', alt: 'Back', class: "back-icon")%>
+  <% end %>
   <h1>New Category</h1>
   <h4>Help</h4>
 </nav>
 
 <div>
-<%= form_with model: @group, method: :post, url: groups_path do |form| %>
+<%= form_with model: @group, method: :post, url: groups_path, html: { multipart: true } do |form| %>
 <br/>
   <div>
     <%= form.text_field :name, placeholder: "Name" , class: "form-field" %><br>
   </div>
 
-  <div>
-    <%= form.text_field :icon, placeholder: "icon" , class: "form-field" %><br>
+  <div class="icon-upload">
+    <%= form.label :icon, 'Upload Category Icon' %>
+    <%= form.file_field :icon, class: "form-field"  %><br>
   </div>
 
   <div class="bottom-btn p-green">

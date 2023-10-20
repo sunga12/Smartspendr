@@ -1,5 +1,7 @@
 <nav class="p-blue">
-  <%= link_to '<-', group_entities_path %>
+  <%= link_to group_entities_path do %>
+  <%= image_tag('back.png', alt: 'Back', class: "back-icon")%>
+  <% end %>
   <h1>New Transaction</h1>
   <h4>Help</h4>
 </nav>
