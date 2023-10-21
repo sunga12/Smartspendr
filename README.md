@@ -71,7 +71,7 @@
 
 ## 🚀 Deployment <a name="loom-demo"></a>
 
-- [Video Presentation]()
+- [Video Presentation](https://drive.google.com/file/d/1kNJ0GnsSbrA2dwnN8_PcfoyBpPj3OAY5/view?usp=sharing)
 
 - [Demo link](https://smartspendr-budget-app.onrender.com/)
 <!-- GETTING STARTED -->
