@@ -9,7 +9,6 @@ RSpec.describe 'Categories Page', type: :system do
       login_as(@user, scope: :user)
 
       visit groups_path
-
     end
 
     it 'shows the right content' do
@@ -31,7 +30,8 @@ RSpec.describe 'Categories Page', type: :system do
     before(:each) do
       @user = User.create(name: 'Jake', email: 'jakes@gmail.com', password: '123456')
       @group = Group.create(name: 'Food', author_id: @user.id)
-      @group.icon.attach(io: File.open('spec/fixtures/test_icon.png'), filename: 'test_icon.png', content_type: 'image/png')
+      @group.icon.attach(io: File.open('spec/fixtures/test_icon.png'), filename: 'test_icon.png',
+                         content_type: 'image/png')
       @group.save
       @user.skip_confirmation!
       @user.save
@@ -48,5 +48,4 @@ RSpec.describe 'Categories Page', type: :system do
       expect(page).to have_content('$0.0')
     end
   end
-
 end

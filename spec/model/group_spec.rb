@@ -5,9 +5,11 @@ RSpec.describe Group, type: :model do
     Group.create(name: 'Food')
   end
 
-  before { 
-  subject.icon.attach(io: File.open('spec/fixtures/test_icon.png'), filename: 'test_icon.png', content_type: 'image/png')
-  subject.save }
+  before do
+    subject.icon.attach(io: File.open('spec/fixtures/test_icon.png'), filename: 'test_icon.png',
+                        content_type: 'image/png')
+    subject.save
+  end
 
   it 'name should be present' do
     subject.name = nil
@@ -15,7 +17,7 @@ RSpec.describe Group, type: :model do
   end
 
   it 'name should be the right length' do
-    subject.name = 'a'*260
+    subject.name = 'a' * 260
     expect(subject).to_not be_valid
   end
 
@@ -23,5 +25,4 @@ RSpec.describe Group, type: :model do
     subject.icon = nil
     expect(subject).to_not be_valid
   end
-
 end

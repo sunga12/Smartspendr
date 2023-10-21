@@ -5,7 +5,8 @@ RSpec.describe 'Entities Page', type: :system do
     before(:each) do
       @user = User.create(name: 'Jake', email: 'jakes@gmail.com', password: '123456')
       @group = Group.create(name: 'Food', author_id: @user.id)
-      @group.icon.attach(io: File.open('spec/fixtures/test_icon.png'), filename: 'test_icon.png', content_type: 'image/png')
+      @group.icon.attach(io: File.open('spec/fixtures/test_icon.png'), filename: 'test_icon.png',
+                         content_type: 'image/png')
       @group.save
       @user.skip_confirmation!
       @user.save
@@ -37,7 +38,8 @@ RSpec.describe 'Entities Page', type: :system do
     before(:each) do
       @user = User.create(name: 'Jake', email: 'jakes@gmail.com', password: '123456')
       @group = Group.create(name: 'Food', author_id: @user.id)
-      @group.icon.attach(io: File.open('spec/fixtures/test_icon.png'), filename: 'test_icon.png', content_type: 'image/png')
+      @group.icon.attach(io: File.open('spec/fixtures/test_icon.png'), filename: 'test_icon.png',
+                         content_type: 'image/png')
       @group.save
       @entity = Entity.create(name: 'KFC', amount: 125, author_id: @user.id, group_ids: [@group.id])
       @user.skip_confirmation!
@@ -55,5 +57,4 @@ RSpec.describe 'Entities Page', type: :system do
       expect(page).to have_content('125')
     end
   end
-
 end

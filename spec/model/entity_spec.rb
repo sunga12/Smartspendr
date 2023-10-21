@@ -15,7 +15,7 @@ RSpec.describe Entity, type: :model do
   end
 
   it 'name should be the right length' do
-    subject.name = 'a'*260
+    subject.name = 'a' * 260
     expect(subject).to_not be_valid
   end
 
@@ -28,5 +28,4 @@ RSpec.describe Entity, type: :model do
     subject.amount = 'cheese'
     expect(subject).to_not be_valid
   end
-
 end

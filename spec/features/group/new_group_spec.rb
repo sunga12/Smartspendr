@@ -22,11 +22,10 @@ RSpec.describe 'New Category Page', type: :system do
 
 
     it 'Redirects back to the home page when the Save Category button is clicked' do
-      fill_in "Name",	with: "Sports" 
-      attach_file( "Icon", Rails.root + 'spec/fixtures/test_icon.png' )
+      fill_in 'Name',	with: 'Sports'
+      attach_file('Icon', "#{Rails.root}spec/fixtures/test_icon.png")
       click_button 'Save Category'
       expect(page).to have_current_path(groups_path)
     end
   end
-
 end

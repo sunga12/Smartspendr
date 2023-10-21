@@ -13,11 +13,10 @@ class User < ApplicationRecord
   attribute :name, :string
 
   # Validations
-  validates :name, presence: :true, length: { maximum: 100 }
-  validates :email, presence: :true, uniqueness: true, length: { maximum: 150 }
+  validates :name, presence: true, length: { maximum: 100 }
+  validates :email, presence: true, uniqueness: true, length: { maximum: 150 }
 
   # Methods
 
   # Callbacks
-
 end
