@@ -33,7 +33,6 @@ RSpec.describe 'Entities Page', type: :system do
     end
   end
 
-
   describe 'Viewing the index page after adding a Transaction' do
     before(:each) do
       @user = User.create(name: 'Jake', email: 'jakes@gmail.com', password: '123456')

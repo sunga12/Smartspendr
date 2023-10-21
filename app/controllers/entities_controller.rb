@@ -18,12 +18,10 @@ class EntitiesController < ApplicationController
 
   def create
     group_ids = params[:entity][:group_ids].reject(&:empty?)
-
     if group_ids.any?
       @groups = current_user.groups.where(id: group_ids)
       @entity = Entity.new(entity_params)
       @entity.author_id = current_user.id
-
       respond_to do |format|
         format.html do
           if @entity.save
@@ -31,8 +29,6 @@ class EntitiesController < ApplicationController
             redirect_to group_entities_path, notice: 'Transaction Added successfully'
           else
             flash.now[:error] = 'Error: Transaction could not be added'
-            logger.error(@entity.errors.full_messages) # Log validation errors
-            render :new, notice: 'Error: Transaction could not be added'
           end
         end
       end

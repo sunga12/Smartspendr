@@ -11,7 +11,6 @@ class Entity < ApplicationRecord
   validates :name, presence: true, length: { maximum: 250 }
   validates :amount, presence: true, numericality: { greater_than_or_equal_to: 0 }
 
-
   # Methods
 
   # Callbacks

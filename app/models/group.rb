@@ -4,7 +4,6 @@ class Group < ApplicationRecord
   has_and_belongs_to_many :entities, dependent: :destroy
   has_one_attached :icon
 
-
   # Attributes
   attribute :name, :string
   attribute :icon, :string
@@ -12,7 +11,6 @@ class Group < ApplicationRecord
   # Validations
   validates :name, presence: true, length: { maximum: 250 }
   validates :icon, presence: true
-
 
   # Methods
 

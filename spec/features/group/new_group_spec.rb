@@ -20,7 +20,6 @@ RSpec.describe 'New Category Page', type: :system do
       expect(page).to have_button('Save Category')
     end
 
-
     it 'Redirects back to the home page when the Save Category button is clicked' do
       fill_in 'Name',	with: 'Sports'
       attach_file('Icon', "#{Rails.root}spec/fixtures/test_icon.png")
