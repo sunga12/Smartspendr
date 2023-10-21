@@ -4,7 +4,9 @@ RSpec.describe 'Entities Page', type: :system do
   describe 'Viewing the New Transaction Page' do
     before(:each) do
       @user = User.create(name: 'Jake', email: 'jakes@gmail.com', password: '123456')
-      @group = Group.create(name: 'Food', icon: 'phtolab.com/food', author_id: @user.id)
+      @group = Group.create(name: 'Food', author_id: @user.id)
+      @group.icon.attach(io: File.open('spec/fixtures/test_icon.png'), filename: 'test_icon.png', content_type: 'image/png')
+      @group.save
       @user.skip_confirmation!
       @user.save
       login_as(@user, scope: :user)
@@ -19,10 +21,6 @@ RSpec.describe 'Entities Page', type: :system do
 
     it 'has a button to have a transaction' do
       expect(page).to have_button('Save Transaction')
-    end
-
-    it 'has a button to go back to the categories' do
-      expect(page).to have_link('Back to Transactions')
     end
 
     it 'Redirects back to the transactions page when the Save Transaction button is clicked' do

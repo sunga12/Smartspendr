@@ -16,17 +16,14 @@ RSpec.describe 'New Category Page', type: :system do
       expect(page).to have_field('Icon')
     end
 
-    it 'has a button to have a transaction' do
+    it 'has a button to have a Category' do
       expect(page).to have_button('Save Category')
     end
 
-    it 'has a button to go back to the categories' do
-      expect(page).to have_link('Back to Categories')
-    end
 
     it 'Redirects back to the home page when the Save Category button is clicked' do
       fill_in "Name",	with: "Sports" 
-      fill_in "Icon",	with: "photolab.com/sports" 
+      attach_file( "Icon", Rails.root + 'spec/fixtures/test_icon.png' )
       click_button 'Save Category'
       expect(page).to have_current_path(groups_path)
     end

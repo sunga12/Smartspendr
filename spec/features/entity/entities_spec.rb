@@ -4,7 +4,9 @@ RSpec.describe 'Entities Page', type: :system do
   describe 'Viewing the index page with no Transactions' do
     before(:each) do
       @user = User.create(name: 'Jake', email: 'jakes@gmail.com', password: '123456')
-      @group = Group.create(name: 'Food', icon: 'phtolab.com/food', author_id: @user.id)
+      @group = Group.create(name: 'Food', author_id: @user.id)
+      @group.icon.attach(io: File.open('spec/fixtures/test_icon.png'), filename: 'test_icon.png', content_type: 'image/png')
+      @group.save
       @user.skip_confirmation!
       @user.save
       login_as(@user, scope: :user)
@@ -34,7 +36,9 @@ RSpec.describe 'Entities Page', type: :system do
   describe 'Viewing the index page after adding a Transaction' do
     before(:each) do
       @user = User.create(name: 'Jake', email: 'jakes@gmail.com', password: '123456')
-      @group = Group.create(name: 'Food', icon: 'phtolab.com/food', author_id: @user.id)
+      @group = Group.create(name: 'Food', author_id: @user.id)
+      @group.icon.attach(io: File.open('spec/fixtures/test_icon.png'), filename: 'test_icon.png', content_type: 'image/png')
+      @group.save
       @entity = Entity.create(name: 'KFC', amount: 125, author_id: @user.id, group_ids: [@group.id])
       @user.skip_confirmation!
       @user.save
