@@ -71,7 +71,7 @@
 
 ## 🚀 Deployment <a name="loom-demo"></a>
 
-- [Video Presentation](https://drive.google.com/file/d/1kNJ0GnsSbrA2dwnN8_PcfoyBpPj3OAY5/view?usp=sharing)
+- [Video Presentation](https://drive.google.com/file/d/14bE_RTUcy2cvM0OWt29JcEVehvzCL120/view?usp=sharing)
 
 - [Demo link](https://smartspendr-budget-app.onrender.com/)
 <!-- GETTING STARTED -->
@@ -177,7 +177,10 @@ If you like this project, kindly leave a star!
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-- We would like to thank Microverse for providing the project specifications as well as the lessons leading up to the project that made completing it possible.
+- I would like to thank Microverse for providing the project specifications as well as the lessons leading up to the project that made completing it possible.
+
+
+- I would also like to thank Gregoire Vella for the [Original design idea on Behance](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
