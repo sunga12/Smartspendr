@@ -16,6 +16,7 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
+  - [🚀 Deployment ](#-deployment-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Install \& Setup](#install--setup)
@@ -68,7 +69,11 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## 🚀 Deployment <a name="loom-demo"></a>
 
+- [Video Presentation]()
+
+- [Demo link](https://smartspendr-budget-app.onrender.com/)
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
