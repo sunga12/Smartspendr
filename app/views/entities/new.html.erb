@@ -1,0 +1,28 @@
+<nav class="p-blue">
+  <%= link_to group_entities_path do %>
+  <%= image_tag('back.png', alt: 'Back', class: "back-icon")%>
+  <% end %>
+  <h1>New Transaction</h1>
+  <h4>Help</h4>
+</nav>
+
+<section>
+<%= form_with model: @entity, method: :post, url: group_entities_path do |form| %>
+<br />
+  <div>
+    <%= form.text_field :name, placeholder: "Name" , class: "form-field" %><br>
+  </div>
+
+  <div>
+    <%= form.text_field :amount, placeholder: "Amount" , class: "form-field" %><br>
+  </div>
+
+  <div class="checkboxes" >
+    <%= form.collection_check_boxes(:group_ids, current_user.groups, :id, :name)%><br>
+  </div>
+
+  <div class="bottom-btn p-green">
+    <%= form.submit "Save Transaction", class: "new-categ-btn p-green" %><br>
+  </div>
+  <%end%>
+</section>

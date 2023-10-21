@@ -1,0 +1,196 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+body {
+  font-family: Lato, Arial, Helvetica, sans-serif;
+  margin: 0 auto;
+  padding: 0;
+  height: 97vh;
+  background-color: #eee;
+}
+
+a {
+  text-decoration: none;
+
+  /* color: #fff; */
+}
+
+.p-blue {
+  background-color: #3778c2;
+  color: #fff;
+  border: 0;
+}
+
+.p-green {
+  background-color: #5fb523;
+  color: #fff;
+}
+
+.p-grey {
+  background-color: #434b54;
+  color: #fff;
+}
+
+.splash-page {
+  justify-content: center;
+  margin: auto;
+  overflow-y: hidden;
+}
+
+.logo {
+  text-align: center;
+  margin-top: 7rem;
+}
+
+.splash-links {
+  position: fixed;
+  bottom: 5px;
+  width: 100%;
+}
+
+.splash-link {
+  width: 100%;
+  padding: 3%;
+  margin: 1% auto;
+  border: 0;
+  border-radius: 3px;
+  background-color: #3778c2;
+  color: #fff;
+}
+
+.splash-link:hover {
+  background-color: #3778c2;
+  color: #fff;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2%;
+  margin: 0;
+}
+
+.form-fields {
+  margin: 2%;
+}
+
+.form-field {
+  width: 90%;
+  margin: 1% 2%;
+  padding: 2%;
+}
+
+.categories {
+  height: 97vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.category {
+  display: flex;
+  justify-content: space-between;
+  margin: 2%;
+  padding: 2%;
+  background-color: #fff;
+  box-shadow: 0 2px 5px 0 rgba(94, 94, 94, 0.699);
+}
+
+.link-categ {
+  display: flex;
+  gap: 1rem;
+}
+
+.mid-categ {
+  display: flex;
+  flex-direction: column;
+  color: #909396;
+  justify-self: flex-start;
+}
+
+.new-categ-btn {
+  width: 95vw;
+  margin: 2% auto;
+  padding: 3%;
+  border: 1px solid white;
+  text-align: center;
+}
+
+.margin-0-2pc {
+  margin-right: 2%;
+  margin-left: 2%;
+}
+
+.bottom-btn {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.icon-div {
+  width: 30%;
+  justify-self: flex-start;
+}
+
+.icon {
+  margin: 3%;
+  width: 100%;
+}
+
+.total {
+  font-weight: bold;
+  color: #434b54;
+  padding-right: 3%;
+}
+
+.logout-btn {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.small-text {
+  font-size: 0.7rem;
+  align-self: center;
+}
+
+.trans-name {
+  width: 30%;
+}
+
+.checkboxes {
+  margin: 2%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.back-icon {
+  width: 2rem;
+  filter: brightness(0) invert(1); /* Apply a white color overlay */
+}
+
+.icon-upload {
+  margin: 3%;
+}
+
+.delete-categ {
+  z-index: 1000;
+  border: 3px solid #fff;
+}
